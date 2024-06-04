@@ -11,6 +11,7 @@ tag Nav
 		css 
 			%header bg:sky8 h:55px t:0 l:0 d:hcl g:2 px:2
 			a c:gray2 @hover:white td:none ease:1s
+			.active c:yellow3
 		<%header @click=L("AA")>
 			<a route-to='/'> <strong> "HN" 
 			<a route-to='/newest'> <strong> "New" 
