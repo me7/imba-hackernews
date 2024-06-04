@@ -1,5 +1,14 @@
 global css * bd:1px dashed red box-sizing:border-box m:0 ff:sans
 
+tag Stories
+	def routed
+		data = [1,2,3,4]
+
+	<self bg@suspend=red>
+		for i in data
+			<pre> i
+	
+
 tag Nav
 	<self>
 		css 
@@ -17,5 +26,6 @@ tag Nav
 tag App
 	<self>
 		<Nav>
+		<Stories route='/'>
 
 imba.mount <App>
