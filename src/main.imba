@@ -1,12 +1,21 @@
-global css body c:warm2 bg:warm8 ff:Arial inset:0 d:vcc
+global css * bd:1px dashed red box-sizing:border-box m:0 ff:sans
+
+tag Nav
+	<self>
+		css 
+			%header bg:sky8 h:55px t:0 l:0 d:hcl g:2 px:2
+			a c:gray2 @hover:white td:none ease:1s
+		<%header>
+			<a href='/'> <strong> "HN" 
+			<a href='/news'> <strong> "News" 
+			<a href='/show'> <strong> "Show" 
+			<a href='/ask'> <strong> "Ask" 
+			<a href='/jobs'> <strong> "Jobs" 
+			<div[fl:1]>
+			<a href='https://imba.io'> "Build with Imba" 
 
 tag App
-	count = 0
 	<self>
-		<%counter @click=count++>
-			css e:250ms us:none py:3 px:5 rd:4 bg:gray9 d:hcc g:1
-				bd:1px solid transparent @hover:indigo5
-			<img[s:20px] src="https://imba.io/logo.svg">
-			"count is {count}"
+		<Nav>
 
 imba.mount <App>
