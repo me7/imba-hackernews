@@ -10,7 +10,7 @@ tag Nav
 	<self>
 		css 
 			%header bg:sky8 h:55px t:0 l:0 d:hcl g:2 px:2
-			a c:gray2 @hover:white td:none ease:1s
+			a c:gray2 @hover:white td:none ease:.3s
 			.active c:yellow3
 		<%header @click=L("AA")>
 			<a route-to='/'> <strong> "HN" 
@@ -26,7 +26,7 @@ tag App
 	<self>
 		<Nav>
 		<User route='/user/:name'>
-		<Stories route='/:page'>
-		<Stories route='/'>
+		<Stories route='/:topic'>
 
+imba.router.alias('/', '/news')
 imba.mount <App>

@@ -11,13 +11,14 @@ tag Story
 				<a href="/story/{data.id}"> "{+data.comments_count} comments"
 
 export tag Stories
+	
 	def routed
-		Log route.params.page
-		let page = route.params.page or "news"
+		let page = route.params.topic or "news"
 		let url = "https://node-hnapi.herokuapp.com/{page}"
 		res = await global.fetch(url)
 		data = await res.json()
 	
 	<self bg@suspend=red>
+		Log route
 		for s, index in data
 			<Story @click.log(s) data=s>
