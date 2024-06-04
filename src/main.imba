@@ -2,11 +2,13 @@ global css * bd:1px dashed red box-sizing:border-box m:0 ff:sans
 
 tag Stories
 	def routed
-		data = [1,2,3,4]
+		let url = 'https://node-hnapi.herokuapp.com/'
+		res = await global.fetch(url)
+		data = await res.json()
 
 	<self bg@suspend=red>
-		for i in data
-			<pre> i
+		for k in data.memory.keys
+			<pre> k
 	
 
 tag Nav
